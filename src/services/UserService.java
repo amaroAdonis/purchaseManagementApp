@@ -1,6 +1,7 @@
 package services;
 
 import model.User;
+import parser.ProductReader;
 import parser.UserReader;
 
 import java.io.*;
@@ -39,6 +40,11 @@ public class UserService {
         }
         UserReader ur = new UserReader();
         ur.dataWriter(userList);
+    }
+
+    public void readAll() throws IOException {
+        UserReader us = new UserReader();
+        us.dataReader();
     }
 
     public static User stringToUser(String user) {
@@ -80,6 +86,23 @@ public class UserService {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
             for (var user : users) {
                 csvUser(bw, user);
+            }
+        }
+    }
+
+    public void readById () throws IOException {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Insert the user ID that will be printed: ");
+        Integer id = sc.nextInt();
+        sc.nextLine();
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+            List<String> lines = br.lines().toList();
+            for (var line : lines) {
+                var user = stringToUser(line);
+                if (Objects.equals(user.getId(), id)) {
+                    System.out.println("User id, number " + user.getId() +  ", correspond to: " + line);
+
+                }
             }
         }
     }

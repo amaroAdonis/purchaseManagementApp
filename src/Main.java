@@ -43,7 +43,12 @@ public class Main {
         UserService us = new UserService();
         Scanner sc = new Scanner(System.in);
         System.out.println(">>> What do you want to do? <<<");
-        System.out.println("-Create users? Press 'a'. \n-Delete users? Press 'b'.");
+        System.out.println("""
+                a. Create users?        Press 'a'.\s
+                b. Delete users?        Press 'b'.\s
+                c. Read all users?      Press 'c'.\s
+                d. Read an user by id?  Press 'd'.""");
+
         String answer = sc.nextLine();
         switch (answer) {
             case "a" -> {us.createUser();}
@@ -53,6 +58,8 @@ public class Main {
                 sc.nextLine();
                 us.dataDeleter(idToDelete);
             }
+            case "c" -> {us.readAll();}
+            case "d" -> {us.readById();}
         }
 
     }
