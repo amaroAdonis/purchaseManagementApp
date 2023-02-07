@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class PurchaseReader implements Reader{
-    public String path = "./csv/purchase.csv\"";
+    public String path = "./csv/purchase.csv";
     Scanner sc = new Scanner(System.in);
 
     @Override
