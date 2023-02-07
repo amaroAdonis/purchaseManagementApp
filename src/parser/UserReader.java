@@ -9,7 +9,7 @@ import java.util.*;
 
 public class UserReader implements Reader<User> {
 
-    private final String path = ".csv/user.csv";
+    private final String path = "./csv/user.csv";
     Scanner sc = new Scanner(System.in);
 
 

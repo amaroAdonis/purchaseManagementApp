@@ -12,7 +12,7 @@ public class ProductService {
 
     public List<Product> products = new ArrayList<>();
     public Product product = new Product();
-    public String path = ".csv/product.csv";
+    public String path = "./csv/product.csv";
 
 
     public void productInsert() {
