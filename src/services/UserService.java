@@ -9,7 +9,7 @@ import java.util.*;
 public class UserService {
     private final List<User> userList = new ArrayList<>();
     private User user = new User();
-    private final String path = "D:/adonis/estudosJavaDev/Purchaseapp2023/csv/user.csv";
+    private final String path = ".";
 
     public UserService() {
     }

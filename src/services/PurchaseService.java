@@ -14,7 +14,7 @@ public class PurchaseService {
 
     public List<Purchase> purchases = new ArrayList<>();
     public Purchase purchase = new Purchase();
-    public String path = "D:/adonis/estudosJavaDev/Purchaseapp2023/csv/purchase.csv";
+    public String path = ".csv/purchase.csv";
 
 
     public void purchaseCreate() {

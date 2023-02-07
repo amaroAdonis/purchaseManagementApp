@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ProductReader implements Reader{
-    public String path = "D:/adonis/estudosJavaDev/Purchaseapp2023/csv/product.csv";
+    public String path = ".csv/product.csv";
     Scanner sc = new Scanner(System.in);
 
 
